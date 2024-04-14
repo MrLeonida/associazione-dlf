@@ -72,7 +72,7 @@ export default function News() {
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Le ultime novità ed i prossimi eventi</h2>
           <p className="mt-2 text-lg leading-8 text-gray-600">
-            Scopri le ultime novità, le promozioni in corso ed i prossimi eventi della nostra associazione. Dal lancio di nuove iniziative alla copertura degli eventi, questa sezione è la risorsa per rimanere sempre aggiornati su ciò che succede all'interno dei nostri gruppi. Non perderti neanche un momento: segui i nostri aggiornamenti ed unisciti a noi nel rendere la nostra comunità ancora più vibrante e coinvolgente!
+            Scopri le ultime novità, le promozioni in corso ed i prossimi eventi della nostra associazione. Dal lancio di nuove iniziative alla copertura degli eventi, questa sezione è la risorsa per rimanere sempre aggiornati su ciò che succede all&apos;interno dei nostri gruppi. Non perderti neanche un momento: segui i nostri aggiornamenti ed unisciti a noi nel rendere la nostra comunità ancora più vibrante e coinvolgente!
           </p>
         </div>
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
