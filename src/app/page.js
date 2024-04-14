@@ -9,6 +9,7 @@ import AppStore from '@/components/appStore';
 import GooglePlay from '@/components/googlePlay';
 import Banner from '@/components/banner';
 import Faq from '@/components/faq';
+import News from '@/components/news';
 
 const posts = [
   {
@@ -145,6 +146,8 @@ export default function Page() {
         </div>
       </div>
     </div>
+
+    <News />
 
       <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
