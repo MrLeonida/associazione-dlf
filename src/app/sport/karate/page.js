@@ -1,4 +1,3 @@
-"use client";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHandsClapping, faUniformMartialArts, faUserFriends } from '@fortawesome/pro-solid-svg-icons'

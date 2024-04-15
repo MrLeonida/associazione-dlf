@@ -1,5 +1,5 @@
 
-import DapiClient from 'fm-dapi';
+import { DataApi } from '@proofgeist/fmdapi'
 import Header from '@/components/header';
 import Warning from '@/components/warning';
 import Footer from '@/components/footer';
@@ -11,36 +11,38 @@ function classNames(...classes) {
 
 export default async function Example() {
 
-  const dapiClient = new DapiClient({
+const client = DataApi({
+  db: "dlfTrevisoTheCoreApp",
+  server: "https://dev.thecore.software",
+  auth: {
     username: "api",
-    password: "apiUser2024",
-    version: "vLatest",
-    host: "dev.thecore.software",
-    database: "dlfTrevisoTheCoreApp"
-  });
-  const layout = 'apiNews'
-  const sort =  [
-    {
-      "fieldName": "ctDate",
-      "sortOrder": "descend"
-    }
-  ]
-  const query = [
-    {
-        "ctDate": "*"
-    }
-]    
+    password: "apiUser2024"
+  }
+});
+const layout = 'apiNews'
+const sort =  [
+  {
+    "fieldName": "ctDate",
+    "sortOrder": "descend"
+  }
+]
+const query = [
+  {
+      "ctDate": "*"
+  }
+]
+const findResult = await client.findAll({
+  layout: layout,
+  query: query,
+  sort: sort,
+  limit: 10
+});
 
-const findResult = await dapiClient.performFind(layout, {
-query: query,
-sort: sort
-})
-
-const code = findResult.messages[0].code;
+const code = 0;
 
 if(code == 0) {
 
-  const posts = findResult.response.data;
+  const posts = findResult;
 
   return (
     <div className="bg-slate-50">

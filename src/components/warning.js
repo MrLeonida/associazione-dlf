@@ -1,5 +1,5 @@
 
-import DapiClient from 'fm-dapi';
+import { DataApi } from '@proofgeist/fmdapi'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBells } from '@fortawesome/pro-solid-svg-icons'
 
@@ -9,12 +9,13 @@ function classNames(...classes) {
 
 export default async function Warning() {
 
-  const dapiClient = new DapiClient({
-    username: "api",
-    password: "apiUser2024",
-    version: "vLatest",
-    host: "dev.thecore.software",
-    database: "dlfTrevisoTheCoreApp"
+  const client = DataApi({
+    db: "dlfTrevisoTheCoreApp",
+    server: "https://dev.thecore.software",
+    auth: {
+      username: "api",
+      password: "apiUser2024"
+    }
   });
   const layout = 'apiNews'
   const sort =  [
@@ -29,12 +30,13 @@ export default async function Warning() {
     }
   ]
 
-  const findResult = await dapiClient.performFind(layout, {
-    query: query,
-    sort: sort
-    })
+const findResult = await client.find({
+  layout: layout,
+  query: query,
+  sort: sort
+});
 
-  const code = findResult.messages[0].code;
+const code = 0;
 
   if(code == 0) {
   
@@ -43,8 +45,8 @@ export default async function Warning() {
         <p className="text-sm leading-6 text-white">
             <FontAwesomeIcon icon={faBells} className="fa-lg mr-1.5" />
             <span className="font-semibold">Promozione in corso! </span> 
-            <a href={findResult.response.data[0].fieldData.ctWebLink} className="underline underline-offset-2">
-            {findResult.response.data[0].fieldData.title} <span aria-hidden="true">&rarr;</span>
+            <a href={findResult.data[0].fieldData.ctWebLink} className="underline underline-offset-2">
+            {findResult.data[0].fieldData.title} <span aria-hidden="true">&rarr;</span>
             </a>
         </p>
       </div>

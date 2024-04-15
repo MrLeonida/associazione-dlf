@@ -1,4 +1,3 @@
-"use client";
 
 import { CheckIcon } from '@heroicons/react/24/outline'
 import Header from '@/components/header';
