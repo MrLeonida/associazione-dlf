@@ -16,7 +16,7 @@ const posts = [
     href: '/sport',
     description: 'Da sempre inteso come attività ludica e di intrattenimento per eccellenza, lo sport costituisce un momento importante di formazione, di benessere fisico e di aggregazione.',
     imageUrl: '/imageHomeSport.jpg',
-    classes: 'flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-amber-500 group-hover:bg-amber-400',
+    classes: 'flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-amber-800 group-hover:bg-amber-400',
     icon: faMedal,
   },
   {
@@ -25,7 +25,7 @@ const posts = [
     href: '/turismo-e-cultura',
     description: 'Le attività turistiche e culturali sono un punto di forza della proposta del Dopolavoro Ferroviario. Una tradizione storica che ha visto crescere la partecipazione, l’aggregazione e l’entusiasmo dei soci ferrovieri e non solo.',
     imageUrl: '/imageHomeTurismo.jpg',
-    classes: 'flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-blue-500 group-hover:bg-blue-400',
+    classes: 'flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-sky-800 group-hover:bg-blue-400',
     icon: faTrain,
   },
   {
@@ -34,7 +34,7 @@ const posts = [
     href: '/attivita-e-gruppi',
     description: 'Esplora, cattura, crea: unisciti ai nostri gruppi tematici di escursionismo, fotografia e fermodellismo e scopri un mondo di passioni condivise e legami duraturi.',
     imageUrl: '/imageHomeGruppi.jpg',
-    classes: 'flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-teal-500 group-hover:bg-teal-400',
+    classes: 'flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-teal-800 group-hover:bg-teal-400',
     icon: faMountain,
   },
   {
@@ -43,7 +43,7 @@ const posts = [
     href: '/spazi-e-servizi',
     description: 'Il settore dei servizi è indispensabile per assolvere alla finalità del DLF, esso permette di offrire spazi ed opportunità ai soci mettendo a loro disposizione gli strumenti necessari allo sviluppo.',
     imageUrl: '/imageHomeServizi.jpg',
-    classes: 'flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-red-500 group-hover:bg-red-400',
+    classes: 'flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-red-800 group-hover:bg-red-400',
     icon: faFamily,
   },
 ]
