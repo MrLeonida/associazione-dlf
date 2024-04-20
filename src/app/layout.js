@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
       <meta name="theme-color" content="#115e59"></meta>
       <link rel="icon" href="/favicon.ico" sizes="any" />
       
-      <Script strategy="afterInteractive">
+      <Script id="my-script" strategy="afterInteractive">
         {`
           var _iub = _iub || [];
           _iub.csConfiguration = {
