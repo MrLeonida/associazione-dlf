@@ -1,11 +1,12 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlane, faLeaf, faTrain, faCamera, faFamily } from '@fortawesome/pro-solid-svg-icons'
+import { faLeaf, faTrain, faCamera, faFamily } from '@fortawesome/pro-solid-svg-icons'
 import Header from '@/components/header';
-import Warning from '@/components/warning';
+import Warning from '@/components/promo';
 import Footer from '@/components/footer';
 import Banner from '@/components/banner';
 import Faq from '@/components/faq';
+import Attivita from '@/components/attivita';
 
 const highligths = [
   {
@@ -34,15 +35,13 @@ const highligths = [
   }
 ]
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
-
 export default function Example() {
 
   return (
     <div className="bg-slate-50">
     
+    <Attivita />
+
     <Warning />
 
     <Header />
@@ -241,8 +240,6 @@ export default function Example() {
     <Faq />
     
     <Footer />
-
-    <Warning />
 
 
     </div>

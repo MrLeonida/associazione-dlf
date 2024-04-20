@@ -1,53 +1,24 @@
-
-import { DataApi } from '@proofgeist/fmdapi'
+import { fetchNewsListFromFilemaker } from '../lib/apiNewsList';
 import Header from '@/components/header';
-import Warning from '@/components/warning';
+import Promo from '@/components/promo';
 import Footer from '@/components/footer';
 import Faq from '@/components/faq';
+import Attivita from '@/components/attivita';
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
+async function getData() {
+  const data = await fetchNewsListFromFilemaker();
+  return data
+};
 
-export default async function Example() {
-
-const client = DataApi({
-  db: "dlfTrevisoTheCoreApp",
-  server: "https://dev.thecore.software",
-  auth: {
-    username: "api",
-    password: "apiUser2024"
-  }
-});
-const layout = 'apiNews'
-const sort =  [
-  {
-    "fieldName": "ctDate",
-    "sortOrder": "descend"
-  }
-]
-const query = [
-  {
-      "ctDate": "*"
-  }
-]
-const findResult = await client.findAll({
-  layout: layout,
-  query: query,
-  sort: sort,
-  limit: 10
-});
-
-const code = 0;
-
-if(code == 0) {
-
-  const posts = findResult;
+export default async function Page() {
+  const posts = await getData()
 
   return (
     <div className="bg-slate-50">
     
-    <Warning />
+    <Attivita />
+
+    <Promo />
 
     <Header />
 
@@ -61,9 +32,11 @@ if(code == 0) {
           Scopri le ultime novità, le promozioni in corso ed i prossimi eventi della nostra associazione. Dal lancio di nuove iniziative alla copertura degli eventi, questa sezione è la risorsa per rimanere sempre aggiornati su ciò che succede all&apos;interno dei nostri gruppi. Non perderti neanche un momento: segui i nostri aggiornamenti ed unisciti a noi nel rendere la nostra comunità ancora più vibrante e coinvolgente!
           </p>
           <div className="mt-16 space-y-20 lg:mt-20 lg:space-y-20">
+
             {posts.map((post) => (
 
               <article key={post.fieldData._idNews} className="relative isolate flex flex-col gap-8 lg:flex-row">
+                <a href={post.fieldData.ctWebLink} className="absolute top-0 bottom-0 left-0 right-0 z-50"></a>
                 <div className="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0">
                   <img
                     src={post.fieldData.ctWebImage}
@@ -74,22 +47,19 @@ if(code == 0) {
                 </div>
                 <div>
                   <div className="flex items-center gap-x-4 text-xs">
-                    <time className="text-gray-500">
+                    <div className="text-gray-500">
                       {post.fieldData.ctWebDate}
-                    </time>
-                    <a
-                      href={post.fieldData.ctWebLink}
-                      className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
+                    </div>
+                    <div
+                      className={"relative z-10 rounded-full " + post.fieldData.ctWebCategoryColor + " px-3 py-1.5 font-medium text-slate-50"}
                     >
                       {post.fieldData.category}
-                    </a>
+                    </div>
                   </div>
                   <div className="group relative max-w-xl">
-                    <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                      <a href="">
+                    <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900">
                         <span className="absolute inset-0" />
                         {post.fieldData.title}
-                      </a>
                     </h3>
                     <p className="mt-5 text-sm leading-6 text-gray-600">{post.fieldData.ctWebText}</p>
                   </div>
@@ -109,16 +79,8 @@ if(code == 0) {
     
     <Footer />
 
-    <Warning />
-
 
     </div>
   )
-
-} else {
-
-  return null
-
-}
 
 }

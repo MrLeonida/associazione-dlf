@@ -18,11 +18,11 @@ const faqs = [
   },
   {
     question: "Quali sono le strutture a disposizione?",
-    answer: "Le aree dedicate ai nostri associati contano 3 palestre (di cui 1 dedicata al canottaggio), 4 campi da tennis, 1 campo da calcetto, 4 sale riunioni, 3 piste da bocce, bar ed un ampio giardino.",
+    answer: "Le aree dedicate ai nostri associati contano 3 palestre (di cui 1 attrezzata per il canottaggio), 4 campi da tennis, 1 campo da calcetto, 4 sale riunioni, 3 piste da bocce, bar ed un ampio giardino.",
   },
   {
     question: "Come rimanere aggiornati sulle attività organizzate?",
-    answer: "La sezione News del sito sarà presto disponibile e sempre aggiornata con le ultime novità dell’associazione e delle nostre organizzazioni sportive.",
+    answer: "Visita la sezione News del nostro sito: troverai le ultime novità, le promozioni in corso ed i prossimi eventi della nostra associazione.",
   }
 ]
 

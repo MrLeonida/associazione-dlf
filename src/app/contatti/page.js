@@ -2,19 +2,18 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBuildings, faClock, faEnvelope, faPhone } from '@fortawesome/pro-solid-svg-icons';
 import Header from '@/components/header';
-import Warning from '@/components/warning';
+import Warning from '@/components/promo';
 import Footer from '@/components/footer';
 import Faq from '@/components/faq';
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
+import Attivita from '@/components/attivita';
 
 export default function Page() {
 
   return (
     <div className="bg-slate-50">
     
+    <Attivita />
+
     <Warning />
 
     <Header />
@@ -242,8 +241,6 @@ export default function Page() {
     <Faq />
 
     <Footer />
-
-    <Warning />
 
 
     </div>
