@@ -1,12 +1,12 @@
-"use client";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faVolleyball, faUserGroupSimple, faGoalNet } from '@fortawesome/pro-solid-svg-icons'
 import Header from '@/components/header';
-import Warning from '@/components/warning';
+import Warning from '@/components/promo';
 import Footer from '@/components/footer';
 import Faq from '@/components/faq';
 import Banner from '@/components/banner';
+import Attivita from '@/components/attivita';
 
 const features = [
   {
@@ -26,14 +26,12 @@ const features = [
   }
 ]
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
-
 export default function Page() {
 
   return (
     <div className="bg-slate-50">
+
+    <Attivita />
     
     <Warning />
 
@@ -114,8 +112,6 @@ export default function Page() {
     <Faq />
     
     <Footer />
-
-    <Warning />
 
 
     </div>

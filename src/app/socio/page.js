@@ -1,10 +1,10 @@
-"use client";
 
 import { CheckIcon } from '@heroicons/react/24/outline'
 import Header from '@/components/header';
-import Warning from '@/components/warning';
+import Warning from '@/components/promo';
 import Footer from '@/components/footer';
 import Faq from '@/components/faq';
+import Attivita from '@/components/attivita';
 
 const includedFeatures = [
   'Accesso agli spazi delle attività',
@@ -13,15 +13,13 @@ const includedFeatures = [
   'Polizza assicurativa opzionale',
 ]
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
-
 export default function Page() {
 
   return (
     <div className="bg-slate-50">
     
+    <Attivita />
+
     <Warning />
 
     <Header />
@@ -110,9 +108,6 @@ export default function Page() {
     <Faq />
     
     <Footer />
-
-    <Warning />
-
 
     </div>
   )

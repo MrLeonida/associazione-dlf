@@ -26,7 +26,7 @@ const company = [
   { name: 'Treviso e Belluno', href: '/associazione' },
   { name: 'Nazionale', href: 'https://nazionale.dlf.it/' },
   { name: 'Diventa socio', href: '/socio' },
-  { name: 'News', href: '#' },
+  { name: 'News', href: '/news' },
   { name: 'Contatti', href: '/contatti' },
 ]
 const app = [

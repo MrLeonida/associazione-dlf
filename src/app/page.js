@@ -1,14 +1,13 @@
-"use client";
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMedal, faTrain, faFamily, faMountain } from '@fortawesome/pro-solid-svg-icons'
 import Header from '@/components/header';
-import Warning from '@/components/warning';
+import Warning from '@/components/promo';
 import Footer from '@/components/footer';
 import AppStore from '@/components/appStore';
 import GooglePlay from '@/components/googlePlay';
-import Banner from '@/components/banner';
 import Faq from '@/components/faq';
+import News from '@/components/news';
+import Attivita from '@/components/attivita';
 
 const posts = [
   {
@@ -17,7 +16,7 @@ const posts = [
     href: '/sport',
     description: 'Da sempre inteso come attività ludica e di intrattenimento per eccellenza, lo sport costituisce un momento importante di formazione, di benessere fisico e di aggregazione.',
     imageUrl: '/imageHomeSport.jpg',
-    classes: 'flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-amber-500 group-hover:bg-amber-400',
+    classes: 'flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-amber-800 group-hover:bg-amber-400',
     icon: faMedal,
   },
   {
@@ -26,7 +25,7 @@ const posts = [
     href: '/turismo-e-cultura',
     description: 'Le attività turistiche e culturali sono un punto di forza della proposta del Dopolavoro Ferroviario. Una tradizione storica che ha visto crescere la partecipazione, l’aggregazione e l’entusiasmo dei soci ferrovieri e non solo.',
     imageUrl: '/imageHomeTurismo.jpg',
-    classes: 'flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-blue-500 group-hover:bg-blue-400',
+    classes: 'flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-sky-800 group-hover:bg-blue-400',
     icon: faTrain,
   },
   {
@@ -35,7 +34,7 @@ const posts = [
     href: '/attivita-e-gruppi',
     description: 'Esplora, cattura, crea: unisciti ai nostri gruppi tematici di escursionismo, fotografia e fermodellismo e scopri un mondo di passioni condivise e legami duraturi.',
     imageUrl: '/imageHomeGruppi.jpg',
-    classes: 'flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-teal-500 group-hover:bg-teal-400',
+    classes: 'flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-teal-800 group-hover:bg-teal-400',
     icon: faMountain,
   },
   {
@@ -44,20 +43,18 @@ const posts = [
     href: '/spazi-e-servizi',
     description: 'Il settore dei servizi è indispensabile per assolvere alla finalità del DLF, esso permette di offrire spazi ed opportunità ai soci mettendo a loro disposizione gli strumenti necessari allo sviluppo.',
     imageUrl: '/imageHomeServizi.jpg',
-    classes: 'flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-red-500 group-hover:bg-red-400',
+    classes: 'flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-red-800 group-hover:bg-red-400',
     icon: faFamily,
   },
 ]
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
 
 export default function Page() {
 
   return (
     <div className="bg-slate-800">
     
+    <Attivita />
+
     <Warning />
     
     <Header />
@@ -146,12 +143,14 @@ export default function Page() {
       </div>
     </div>
 
-      <div className="bg-white py-24 sm:py-32">
+    <News />
+
+    <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Una vasta scelta di attività</h2>
           <p className="mt-5 text-lg leading-8 text-gray-600">
-            Siamo orgogliosi di presentare un ricco programma di attività sportive che spazia da una vasta gamma di discipline, garantendo divertimento e sfida per tutti i livelli di abilità. Ma non è tutto: la nostra offerta va oltre lo sport, con entusiasmanti attività turistiche e culturali che ti consentono di esplorare luoghi affascinanti e scoprire nuove passioni. Inoltre, i nostri gruppi tematici offrono un ambiente stimolante per incontrare persone con interessi simili e condividere esperienze uniche. E per rendere l&apos;esperienza ancora più gratificante, offriamo un mondo di convenzioni e servizi esclusivi che ti consentono di risparmiare e di godere di vantaggi speciali in diverse attività e negozi. Entra a far parte della nostra associazione e scopri un mondo di opportunità e divertimento che ti aspetta!
+          Un ricco programma di attività sportive che spazia da una vasta gamma di discipline, garantendo divertimento e sfida per tutti i livelli di abilità. Ma non è tutto: la nostra offerta va oltre lo sport, con entusiasmanti attività turistiche e culturali che ti consentono di esplorare luoghi affascinanti e scoprire nuove passioni. Inoltre, i nostri gruppi tematici offrono un ambiente stimolante per incontrare persone con interessi simili e condividere esperienze uniche.
           </p>
         </div>
         <div className="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none md:grid-cols-2 lg:grid-cols-4">
@@ -181,13 +180,75 @@ export default function Page() {
       </div>
     </div>
 
-    <Banner />
+    <div className="bg-white pb-24 sm:pb-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Vasti spazi verdi e numerose aree coperte</h2>
+          <p className="mt-5 text-lg leading-8 text-gray-600">
+            Il nostro centro offre 4 campi da tennis in terra rossa, un campo polivalente in erba sintetica per tennis e calcetto, due palestre, una zona dedicata all&apos;allenamento di canottaggio, un ampio giardino e sale tecniche attrezzate.
+          </p>
+        </div>
+        <div className="grid grid-cols-2 mt-16 md:grid-cols-3 gap-4 sm:mt-20">
+              <div>
+                  <img className="h-auto max-w-full rounded-lg" src="/homeGallery1.jpg" alt="" />
+              </div>
+              <div>
+                  <img className="h-auto max-w-full rounded-lg" src="homeGallery2.jpg" alt="" />
+              </div>
+              <div>
+                  <img className="h-auto max-w-full rounded-lg" src="homeGallery3.jpg" alt="" />
+              </div>
+              <div>
+                  <img className="h-auto max-w-full rounded-lg" src="homeGallery4.jpg" alt="" />
+              </div>
+              <div>
+                  <img className="h-auto max-w-full rounded-lg" src="/homeGallery5.jpg" alt="" />
+              </div>
+              <div>
+                  <img className="h-auto max-w-full rounded-lg" src="homeGallery6.jpg" alt="" />
+              </div>
+              <div>
+                  <img className="h-auto max-w-full rounded-lg" src="homeGallery7.jpg" alt="" />
+              </div>
+              <div>
+                  <img className="h-auto max-w-full rounded-lg" src="homeGallery8.jpg" alt="" />
+              </div>
+              <div>
+                  <img className="h-auto max-w-full rounded-lg" src="/homeGallery9.jpg" alt="" />
+              </div>
+              <div>
+                  <img className="h-auto max-w-full rounded-lg" src="homeGallery10.jpg" alt="" />
+              </div>
+              <div>
+                  <img className="h-auto max-w-full rounded-lg" src="homeGallery11.jpg" alt="" />
+              </div>
+              <div>
+                  <img className="h-auto max-w-full rounded-lg" src="homeGallery12.jpg" alt="" />
+              </div>
+              <div>
+                  <img className="h-auto max-w-full rounded-lg" src="/homeGallery13.jpg" alt="" />
+              </div>
+              <div>
+                  <img className="h-auto max-w-full rounded-lg" src="homeGallery14.jpg" alt="" />
+              </div>
+              <div className="hidden md:block">
+                  <img className="h-auto max-w-full rounded-lg" src="homeGallery15.jpg" alt="" />
+              </div>
+        </div>
+        <div className="mt-10 flex items-center justify-center">
+            <a
+              href="/socio"
+              className="rounded-md bg-indigo-800 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              Diventa socio ed approfitta dei vantaggi
+            </a>
+          </div>
+      </div>
+    </div>
 
     <Faq />
 
     <Footer />
-
-    <Warning />
 
     </div>
   )
