@@ -1,5 +1,3 @@
-"use client";
-
 const navigation = {
   main: [
     { name: 'Associazione', href: '/associazione' },
@@ -8,6 +6,10 @@ const navigation = {
     { name: 'Cultura', href: '/cultura' },
     { name: 'Servizi', href: '/servizi' },
     { name: 'Contatti', href: '/contatti' },
+  ],
+  policies: [
+    { name: 'Privacy policy', href: 'https://www.iubenda.com/privacy-policy/55306890' },
+    { name: 'Cookie policy', href: 'https://www.iubenda.com/privacy-policy/55306890/cookie-policy' },
   ],
   social: [
     {
@@ -39,10 +41,6 @@ const navigation = {
   ],
 }
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
-
 export default function Footer() {
 
   return (
@@ -54,6 +52,15 @@ export default function Footer() {
         {navigation.main.map((item) => (
           <div key={item.name} className="pb-6">
             <a href={item.href} className="text-sm leading-6 text-slate-600 hover:text-slate-900">
+              {item.name}
+            </a>
+          </div>
+        ))}
+      </nav>
+      <nav className="mt-5 -mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
+        {navigation.policies.map((item) => (
+          <div key={item.name} className="pb-6">
+            <a href={item.href} target="blank" className="text-sm leading-6 text-slate-600 hover:text-slate-900">
               {item.name}
             </a>
           </div>

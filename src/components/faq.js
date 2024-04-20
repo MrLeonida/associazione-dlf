@@ -13,7 +13,7 @@ const faqs = [
     answer: "Si può richiedere la propria tessera in Segreteria o online tramite form dedicato.",
   },
   {
-    question: "Dove posso trovare li sconti a me dedicati?",
+    question: "Dove posso trovare gli sconti a me dedicati?",
     answer: "Il sito nazionale DLF è sempre aggiornato con le offerte dedicate attive.",
   },
   {
