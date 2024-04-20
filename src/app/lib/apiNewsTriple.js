@@ -13,7 +13,7 @@ export async function fetchNewsHomeFromFilemaker() {
             limit: 3
         };
 
-        const response = await fetch('https://dev.thecore.software/fmi/data/vLatest/databases/dlfTrevisoTheCoreApp/layouts/apiNewsMultiple/_find', {
+        const response = await fetch('https://app.thecore.software/fmi/data/vLatest/databases/dlfTrevisoTheCoreApp/layouts/apiNewsMultiple/_find', {
             cache: 'no-store',
             method: 'POST',
             headers: {

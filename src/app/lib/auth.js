@@ -2,7 +2,7 @@ import { setToken, getToken } from './authToken';
 
 export async function authenticateWithFilemaker() {
     try {
-        const response = await fetch('https://dev.thecore.software/fmi/data/vLatest/databases/dlfTrevisoTheCoreApp/sessions', {
+        const response = await fetch('https://app.thecore.software/fmi/data/vLatest/databases/dlfTrevisoTheCoreApp/sessions', {
             cache: 'no-store',
             method: 'POST',
             headers: {
