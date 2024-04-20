@@ -5,7 +5,7 @@ export async function fetchNewsListFromFilemaker() {
         const token = await ensureValidToken();
         const query = {
             query: [
-                { "ctDate": "*" }
+                { "ctDate": "*", "flagActive": 1 }
             ],
             sort: [
                 { "fieldName": "ctDate", "sortOrder": "descend" }
