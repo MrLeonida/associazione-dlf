@@ -185,7 +185,7 @@ export default function Page() {
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Vasti spazi verdi e numerose aree coperte</h2>
           <p className="mt-5 text-lg leading-8 text-gray-600">
-            Il nostro centro offre 4 campi da tennis in terra rossa, un campo polivalente in erba sintetica per tennis e calcetto, due palestre, una zona dedicata all'allenamento di canottaggio, un ampio giardino e sale tecniche attrezzate.
+            Il nostro centro offre 4 campi da tennis in terra rossa, un campo polivalente in erba sintetica per tennis e calcetto, due palestre, una zona dedicata all&apos;allenamento di canottaggio, un ampio giardino e sale tecniche attrezzate.
           </p>
         </div>
         <div className="grid grid-cols-2 mt-16 md:grid-cols-3 gap-4 sm:mt-20">
