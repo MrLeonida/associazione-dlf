@@ -14,7 +14,8 @@ export async function fetchNewsHomeFromFilemaker() {
         };
 
         const response = await fetch('https://app.thecore.software/fmi/data/vLatest/databases/dlfTrevisoTheCoreApp/layouts/apiNewsMultiple/_find', {
-            cache: 'no-store',
+            // cache: 'no-store',
+            next: { revalidate: 86400 },
             method: 'POST',
             headers: {
                 'Authorization': 'Bearer ' + token,
