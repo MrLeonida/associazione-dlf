@@ -2,9 +2,9 @@ const navigation = {
   main: [
     { name: 'Associazione', href: '/associazione' },
     { name: 'Sport', href: '/sport' },
-    { name: 'Turismo', href: '/turismo' },
-    { name: 'Cultura', href: '/cultura' },
-    { name: 'Servizi', href: '/servizi' },
+    { name: 'Turismo e cultura', href: '/turismo-e-cultura' },
+    { name: 'Attività e gruppi', href: '/attivita-e-gruppi' },
+    { name: 'Spazi e servizi', href: '/spazi-e-servizi' },
     { name: 'Contatti', href: '/contatti' },
   ],
   policies: [
