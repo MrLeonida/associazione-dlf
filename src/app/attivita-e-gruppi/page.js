@@ -10,8 +10,14 @@ import Attivita from '@/components/attivita';
 
 const highligths = [
   {
+    title: 'Costruendo mondi in miniatura',
+    text: 'Scopri il mondo del fermodellismo con il Gruppo Fermodellisti Trevigiani, una realtà dedicata al recupero della memoria storica del patrimonio ferroviario. Attraverso lezioni coinvolgenti e pratiche, imparerai le tecniche fondamentali per costruire e personalizzare dettagliate riproduzioni in scala ridotta di treni, paesaggi e strutture ferroviarie (che sia una riproduzione al vero oppure di fantasia). Un gruppo che facilita gli incontri, gli scambi di idee e di esperienze tra modellisti ed amanti del treno! ',
+    icon: faTrain,
+    href: 'https://www.facebook.com/gruppofermodellistitrevigiani/'
+  },
+  {
     title: 'Natura ed avventura',
-    text: 'Il GEAM si distingue per la sua comunità di ferrovieri appassionati di montagna. Gestito da un Comitato Tecnico, il gruppo organizza settimanalmente diverse escursioni, adattandosi alle esigenze e ai livelli di esperienza dei partecipanti. ',
+    text: 'Il G.E.A.M. si distingue per la sua comunità di ferrovieri appassionati di montagna. Gestito da un Comitato Tecnico, il gruppo organizza settimanalmente diverse escursioni, adattandosi alle esigenze e ai livelli di esperienza dei partecipanti. ',
     icon: faLeaf,
     href: 'https://sites.google.com/view/geamtv/home'
   },
@@ -19,12 +25,6 @@ const highligths = [
     title: 'Centri estivi',
     text: 'Scopri i nostri centri estivi dedicati ai ragazzi dai 6 ai 14 anni! Offriamo un\'esperienza divertente e educativa, ricca di attività stimolanti e avventure indimenticabili. Dai giochi all\'aria aperta alle attività artistiche e manuali, ogni giornata è piena di opportunità per imparare, crescere e creare nuove amicizie. Con personale qualificato ed un ambiente sicuro, i genitori possono rimanere tranquilli mentre i loro figli si divertono e esplorano.',
     icon: faFamily,
-    href: ''
-  },
-  {
-    title: 'Costruendo mondi in miniatura',
-    text: 'Scopri il magico mondo del fermodellismo con il nostro corso dedicato agli amanti delle ferrovie in miniatura. Attraverso lezioni coinvolgenti e pratiche, imparerai le tecniche fondamentali per costruire e personalizzare dettagliate riproduzioni in scala ridotta di treni, paesaggi e strutture ferroviarie. Entra a far parte di questa comunità creativa e lascia che il tuo mondo in miniatura prenda vita sotto i tuoi occhi!',
-    icon: faTrain,
     href: ''
   },
   {
@@ -174,13 +174,13 @@ export default function Example() {
                     Tariffe ed orari per i soci
                 </p>
                 <p className="mt-2 text-md leading-6 text-slate-100">
-                    <span className='font-medium'>Escursionimo (con il GEAM):</span> 15,00€
+                    <span className='font-medium'>Fermodellismo (con il Gruppo Fermodellisti Trevigiani):</span> 15,00€ (ritrovo il giovedì sera presso la stazione FS di Treviso)
                 </p>
                 <p className="mt-2 text-md leading-6 text-slate-100">
-                    <span className='font-medium'>Fermodellismo:</span> 15,00€
+                    <span className='font-medium'>Escursionimo (con il G.E.A.M.):</span> 15,00€
                 </p>
                 <p className="mt-2 text-md leading-6 text-slate-100">
-                  <span className='font-medium'>Fotografia:</span> 15,00€ (ritrovo il lunedì sera)
+                  <span className='font-medium'>Fotografia:</span> 15,00€ (ritrovo il lunedì sera presso il DLF)
                 </p>
                 <p className="mt-2 text-md leading-6 text-slate-100">
                   Eventuali altre attività extra organizzate da ciascun gruppo sono da considerarsi a parte.
