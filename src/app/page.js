@@ -9,8 +9,6 @@ import Faq from '@/components/faq';
 import News from '@/components/news';
 import Attivita from '@/components/attivita';
 
-export const revalidate = 60
-
 const posts = [
   {
     id: 1,

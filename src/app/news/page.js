@@ -5,6 +5,8 @@ import Footer from '@/components/footer';
 import Faq from '@/components/faq';
 import Attivita from '@/components/attivita';
 
+export const revalidate = 60
+
 async function getData() {
   const data = await fetchNewsListFromFilemaker();
   return data
