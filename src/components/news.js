@@ -1,7 +1,5 @@
 import { fetchNewsHomeFromFirestore } from "@/app/lib/firestoreNewsHome";
 
-export const revalidate = 60
-
 async function getData() {
   const data = await fetchNewsHomeFromFirestore();
   return data
