@@ -1,7 +1,7 @@
-import { fetchNewsHomeFromFilemaker } from "@/app/lib/apiNewsTriple";
+import { fetchNewsHomeFromFirestore } from "@/app/lib/firestoreNewsHome";
 
 async function getData() {
-  const data = await fetchNewsHomeFromFilemaker();
+  const data = await fetchNewsHomeFromFirestore();
   return data
 };
 
@@ -19,11 +19,11 @@ export default async function News() {
         </div>
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {posts.map((post) => (
-            <article key={post.fieldData._idNews} className="relative flex flex-col items-start justify-between">
-              <a href={post.fieldData.ctWebLink} className="absolute top-0 bottom-0 left-0 right-0 z-50"></a>
+            <article key={post.fieldData.idNews} className="relative flex flex-col items-start justify-between">
+              <a href={post.fieldData.link} className="absolute top-0 bottom-0 left-0 right-0 z-50"></a>
               <div className="relative w-full">
                 <img
-                  src={post.fieldData.ctWebImage}
+                  src={post.fieldData.image}
                   alt=""
                   className="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
                 />
@@ -31,11 +31,11 @@ export default async function News() {
               </div>
               <div className="max-w-xl">
                 <div className="mt-8 flex items-center gap-x-4 text-xs">
-                  <div dateTime={post.datetime} className="text-gray-500">
-                  {post.fieldData.ctWebDate}
+                  <div className="text-gray-500">
+                  {post.fieldData.date}
                   </div>
                   <p
-                    className={"relative z-10 rounded-full " + post.fieldData.ctWebCategoryColor + " px-3 py-1.5 font-medium text-slate-50"}
+                    className={"relative z-10 rounded-full " + post.fieldData.categoryColor + " px-3 py-1.5 font-medium text-slate-50"}
                   >
                     {post.fieldData.category}
                   </p>
@@ -45,7 +45,7 @@ export default async function News() {
                       <span className="absolute inset-0" />
                       {post.fieldData.title}
                   </h3>
-                  <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">{post.fieldData.ctWebText}</p>
+                  <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">{post.fieldData.textMin}</p>
                 </div>
               </div>
             </article>
