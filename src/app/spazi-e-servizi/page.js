@@ -1,23 +1,35 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGraduationCap, faAward } from '@fortawesome/pro-solid-svg-icons'
+import { faGraduationCap, faAirplay, faDumbbell, faMugHot } from '@fortawesome/pro-solid-svg-icons'
 import Header from '@/components/header';
-import Warning from '@/components/promo';
+import Warning from '@/components/warning';
 import Footer from '@/components/footer';
 import Banner from '@/components/banner';
 import Faq from '@/components/faq';
-import Attivita from '@/components/attivita';
+
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 const highligths = [
   {
-    title: 'Lo spazio che ti serve',
-    text: 'Che tu abbia bisogno di uno spazio per un evento, una riunione o semplicemente per un\'attività ricreativa, abbiamo la soluzione perfetta per te. Con tariffe competitive e un ambiente accogliente, garantiamo un\'esperienza appagante. Unisciti a noi e scopri tutte le opportunità che ti offriamo per realizzare i tuoi progetti!',
+    title: 'Sale riunioni',
+    text: 'Le nostre due sale riunioni sono ideali per incontri di lavoro, corsi di formazione o presentazioni, queste sale sono completamente attrezzate, spazione e luminose. Offrono un ambiente confortevole e professionale, perfetto per rendere ogni evento un successo.',
     icon: faGraduationCap,
   },
   {
-    title: 'Vantaggi esclusivi',
-    text: 'Grazie alle convenzioni derivate dal DLF nazionale, con brand di fama mondiale, ed alle convenzioni locali, promuoviamo l\'attività sul territorio offrendo sconti su prodotti e servizi di qualità. Scopri quali contattando la nostra segreteria!',
-    icon: faAward,
+    title: 'Sala digitale',
+    text: 'La nostra sala dedicata alla formazione digitale è dotata di computer e connessione internet ad alta velocità. Questo ambiente è l\'ideale per corsi di formazione, workshop digitali e seminari. Un ambiente tecnologicamente attrezzato per apprendimenti efficaci e interattivi.',
+    icon: faAirplay,
+  },
+  {
+    title: 'Palestre',
+    text: 'La nostre due palestre sono ampie e ben attrezzate, perfette per ospitare una varietà di attività sportive. Disponibili per l\'affitto, queste strutture sono ideali per eventi sportivi, allenamenti di squadra e sessioni di fitness individuali, offrendo attrezzature moderne in un ambiente motivante.',
+    icon: faDumbbell,
+  },
+  {
+    title: 'Bar',
+    text: 'La nostra associazione sportiva offre anche un bar accogliente e ben fornito. Perfetto per eventi sociali, incontri dopo l\'allenamento o celebrazioni, il nostro bar crea un ambiente rilassante e conviviale dove soci e ospiti possono rilassarsi e socializzare.',
+    icon: faMugHot,
   }
 ]
 
@@ -25,8 +37,6 @@ export default function Example() {
 
   return (
     <div className="bg-slate-50">
-    
-    <Attivita />
 
     <Warning />
 

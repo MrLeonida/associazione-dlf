@@ -1,10 +1,12 @@
 
 import { CheckIcon } from '@heroicons/react/24/outline'
 import Header from '@/components/header';
-import Warning from '@/components/promo';
+import Warning from '@/components/warning';
 import Footer from '@/components/footer';
 import Faq from '@/components/faq';
-import Attivita from '@/components/attivita';
+
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 const includedFeatures = [
   'Accesso agli spazi delle attività',
@@ -17,8 +19,6 @@ export default function Page() {
 
   return (
     <div className="bg-slate-50">
-    
-    <Attivita />
 
     <Warning />
 
