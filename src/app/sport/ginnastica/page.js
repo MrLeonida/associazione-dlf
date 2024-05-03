@@ -7,7 +7,8 @@ import Footer from '@/components/footer';
 import Faq from '@/components/faq';
 import Banner from '@/components/banner';
 
-export const revalidate = 60
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 const features = [
   {

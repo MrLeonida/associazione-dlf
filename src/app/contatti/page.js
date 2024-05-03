@@ -6,7 +6,8 @@ import Warning from '@/components/warning';
 import Footer from '@/components/footer';
 import Faq from '@/components/faq';
 
-export const revalidate = 60
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 export default function Page() {
 

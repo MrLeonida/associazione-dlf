@@ -6,7 +6,8 @@ import Footer from '@/components/footer';
 import Banner from '@/components/banner';
 import Faq from '@/components/faq';
 
-export const revalidate = 60
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 const highligths = [
   {

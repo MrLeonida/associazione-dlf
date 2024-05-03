@@ -4,7 +4,8 @@ import Footer from '@/components/footer';
 import Faq from '@/components/faq';
 import Warning from '@/components/warning';
 
-export const revalidate = 60
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 async function getData() {
   const data = await fetchNewsListFromFirestore();

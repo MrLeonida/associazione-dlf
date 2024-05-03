@@ -6,7 +6,8 @@ import Footer from '@/components/footer';
 import Faq from '@/components/faq';
 import Warning from '@/components/warning';
 
-export const revalidate = 60
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 async function getData(title) {
   const data = await fetchNewsSingleFromFirestore(title);
@@ -49,8 +50,7 @@ export default async function Page({params}) {
               {post.fieldData.imageSubtitle}
             </figcaption>
           </figure>
-          <div className="mt-10 max-w-2xl">
-            <p className="text-slate-900">{post.fieldData.text}</p>
+          <div className="mt-10 max-w-2xl" dangerouslySetInnerHTML={{ __html: post.fieldData.htmlText }}>
           </div>
           <div className="mt-10 flex">
                 <a href="/contatti" className="text-base font-semibold leading-7 text-indigo-600 underline underline-offset-2">
