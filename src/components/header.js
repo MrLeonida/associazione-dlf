@@ -48,7 +48,7 @@ export default function Header() {
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Associazione DLF Treviso</span>
-            <img className="h-8 w-auto" src="/logo.png" alt="" />
+            <img className="h-10 w-auto" src="/logo.png" alt="" />
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -64,7 +64,7 @@ export default function Header() {
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
 
         <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1.5 text-sm font-semibold leading-6 text-slate-900">
+            <Popover.Button className="flex items-center gap-x-1.5 text-sm font-semibold leading-6 text-slate-900 uppercase">
               Associazione
               <FontAwesomeIcon icon={faChevronDown} className="fa-sm text-slate-400" />
             </Popover.Button>
@@ -93,7 +93,7 @@ export default function Header() {
           </Popover>
 
           <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1.5 text-sm font-semibold leading-6 text-slate-900">
+            <Popover.Button className="flex items-center gap-x-1.5 text-sm font-semibold leading-6 text-slate-900 uppercase">
               Sport
               <FontAwesomeIcon icon={faChevronDown} className="fa-sm text-slate-400" />
             </Popover.Button>
@@ -143,13 +143,13 @@ export default function Header() {
             </Transition>
           </Popover>
 
-          <a href="/turismo-e-cultura" className="text-sm font-semibold leading-6 text-slate-900">
+          <a href="/turismo-e-cultura" className="text-sm font-semibold leading-6 text-slate-900 uppercase">
             Turismo e cultura
           </a>
-          <a href="/attivita-e-gruppi" className="text-sm font-semibold leading-6 text-slate-900">
+          <a href="/attivita-e-gruppi" className="text-sm font-semibold leading-6 text-slate-900 uppercase">
             Attività e gruppi
           </a>
-          <a href="/spazi-e-servizi" className="text-sm font-semibold leading-6 text-slate-900">
+          <a href="/spazi-e-servizi" className="text-sm font-semibold leading-6 text-slate-900 uppercase">
             Spazi e servizi
           </a>
 
@@ -159,7 +159,7 @@ export default function Header() {
 
           <Popover.Group>
             <Popover className="relative">
-              <Popover.Button className="flex items-center gap-x-1.5 text-sm font-semibold leading-6 text-slate-900">
+              <Popover.Button className="flex items-center gap-x-1.5 text-sm font-semibold leading-6 text-slate-900 uppercase">
                 Prenota
                 <FontAwesomeIcon icon={faChevronDown} className="fa-sm text-slate-400" />
               </Popover.Button>
@@ -199,7 +199,7 @@ export default function Header() {
               <Disclosure as="div" className="-mx-3">
                   {({ open }) => (
                     <>
-                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 uppercase">
                         Associazione
                         <ChevronDownIcon
                           className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
@@ -225,7 +225,7 @@ export default function Header() {
                 <Disclosure as="div" className="-mx-3">
                   {({ open }) => (
                     <>
-                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 uppercase">
                         Sport
                         <ChevronDownIcon
                           className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
@@ -250,19 +250,19 @@ export default function Header() {
 
                 <a
                   href="/turismo-e-cultura"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-900 hover:bg-gray-50 uppercase"
                 >
                   Turismo e cultura
                 </a>
                 <a
                   href="/attivita-e-gruppi"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-900 hover:bg-gray-50 uppercase"
                 >
                   Attività e gruppi
                 </a>
                 <a
                   href="/spazi-e-servizi"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-900 hover:bg-gray-50 uppercase"
                 >
                   Spazi e servizi
                 </a>
@@ -273,7 +273,7 @@ export default function Header() {
               <Disclosure as="div" className="-mx-3 py-6">
                   {({ open }) => (
                     <>
-                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 uppercase">
                         Prenota
                         <ChevronDownIcon
                           className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}

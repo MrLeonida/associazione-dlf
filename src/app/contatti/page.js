@@ -2,17 +2,17 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBuildings, faClock, faEnvelope, faPhone } from '@fortawesome/pro-solid-svg-icons';
 import Header from '@/components/header';
-import Warning from '@/components/promo';
+import Warning from '@/components/warning';
 import Footer from '@/components/footer';
 import Faq from '@/components/faq';
-import Attivita from '@/components/attivita';
+
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 export default function Page() {
 
   return (
     <div className="bg-slate-50">
-    
-    <Attivita />
 
     <Warning />
 

@@ -1,12 +1,14 @@
-import { fetchNewsListFromFilemaker } from '../lib/apiNewsList';
+import { fetchNewsListFromFirestore } from '../lib/firestoreNewsList';
 import Header from '@/components/header';
-import Promo from '@/components/promo';
 import Footer from '@/components/footer';
 import Faq from '@/components/faq';
-import Attivita from '@/components/attivita';
+import Warning from '@/components/warning';
+
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 async function getData() {
-  const data = await fetchNewsListFromFilemaker();
+  const data = await fetchNewsListFromFirestore();
   return data
 };
 
@@ -15,10 +17,8 @@ export default async function Page() {
 
   return (
     <div className="bg-slate-50">
-    
-    <Attivita />
 
-    <Promo />
+    <Warning />
 
     <Header />
 
@@ -35,11 +35,11 @@ export default async function Page() {
 
             {posts.map((post) => (
 
-              <article key={post.fieldData._idNews} className="relative isolate flex flex-col gap-8 lg:flex-row">
-                <a href={post.fieldData.ctWebLink} className="absolute top-0 bottom-0 left-0 right-0 z-50"></a>
+              <article key={post.fieldData.idNews} className="relative isolate flex flex-col gap-8 lg:flex-row">
+                <a href={post.fieldData.link} className="absolute top-0 bottom-0 left-0 right-0 z-50"></a>
                 <div className="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0">
                   <img
-                    src={post.fieldData.ctWebImage}
+                    src={post.fieldData.image}
                     alt=""
                     className="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover"
                   />
@@ -48,10 +48,10 @@ export default async function Page() {
                 <div>
                   <div className="flex items-center gap-x-4 text-xs">
                     <div className="text-gray-500">
-                      {post.fieldData.ctWebDate}
+                      {post.fieldData.date}
                     </div>
                     <div
-                      className={"relative z-10 rounded-full " + post.fieldData.ctWebCategoryColor + " px-3 py-1.5 font-medium text-slate-50"}
+                      className={"relative z-10 rounded-full " + post.fieldData.categoryColor + " px-3 py-1.5 font-medium text-slate-50"}
                     >
                       {post.fieldData.category}
                     </div>
@@ -61,7 +61,7 @@ export default async function Page() {
                         <span className="absolute inset-0" />
                         {post.fieldData.title}
                     </h3>
-                    <p className="mt-5 text-sm leading-6 text-gray-600">{post.fieldData.ctWebText}</p>
+                    <p className="mt-5 text-sm leading-6 text-gray-600">{post.fieldData.textMin}</p>
                   </div>
                 </div>
               </article>

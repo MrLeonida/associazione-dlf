@@ -2,21 +2,23 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLeaf, faTrain, faCamera, faFamily } from '@fortawesome/pro-solid-svg-icons'
 import Header from '@/components/header';
-import Warning from '@/components/promo';
+import Warning from '@/components/warning';
 import Footer from '@/components/footer';
 import Banner from '@/components/banner';
 import Faq from '@/components/faq';
-import Attivita from '@/components/attivita';
+
+export const dynamic = 'force-dynamic'
+export const revalidate = 60
 
 const highligths = [
   {
-    title: 'Costruendo mondi in miniatura',
+    title: 'Fermodellismo',
     text: 'Scopri il mondo del fermodellismo con il Gruppo Fermodellisti Trevigiani, una realtà dedicata al recupero della memoria storica del patrimonio ferroviario. Attraverso lezioni coinvolgenti e pratiche, imparerai le tecniche fondamentali per costruire e personalizzare dettagliate riproduzioni in scala ridotta di treni, paesaggi e strutture ferroviarie (che sia una riproduzione al vero oppure di fantasia). Un gruppo che facilita gli incontri, gli scambi di idee e di esperienze tra modellisti ed amanti del treno! ',
     icon: faTrain,
     href: 'https://www.facebook.com/gruppofermodellistitrevigiani/'
   },
   {
-    title: 'Natura ed avventura',
+    title: 'Escursionismo',
     text: 'Il G.E.A.M. si distingue per la sua comunità di ferrovieri appassionati di montagna. Gestito da un Comitato Tecnico, il gruppo organizza settimanalmente diverse escursioni, adattandosi alle esigenze e ai livelli di esperienza dei partecipanti. ',
     icon: faLeaf,
     href: 'https://sites.google.com/view/geamtv/home'
@@ -28,7 +30,7 @@ const highligths = [
     href: ''
   },
   {
-    title: 'Catturando istanti, creando memorie',
+    title: 'Fotografia',
     text: 'Scattare fotografie è più di un semplice clic; è catturare emozioni, trasmettere storie e congelare istanti nel tempo. Il nostro corso di fotografia ti guiderà attraverso i fondamenti tecnici e artistici, trasformando la tua passione in abilità. Con sessioni pratiche e feedback personalizzato, scoprirai il potenziale della tua macchina fotografica e libererai la tua creatività. Entra nel mondo della fotografia e lascia che le tue immagini raccontino la tua storia.',
     icon: faCamera,
     href: ''
@@ -39,8 +41,6 @@ export default function Example() {
 
   return (
     <div className="bg-slate-50">
-    
-    <Attivita />
 
     <Warning />
 
@@ -174,13 +174,13 @@ export default function Example() {
                     Tariffe ed orari per i soci
                 </p>
                 <p className="mt-2 text-md leading-6 text-slate-100">
-                    <span className='font-medium'>Fermodellismo (con il Gruppo Fermodellisti Trevigiani):</span> 15,00€ (ritrovo il giovedì sera presso la stazione FS di Treviso)
+                    <span className='font-medium'>Fermodellismo (con il Gruppo Fermodellisti Trevigiani):</span> ritrovo il giovedì sera presso la stazione FS di Treviso
                 </p>
                 <p className="mt-2 text-md leading-6 text-slate-100">
-                    <span className='font-medium'>Escursionimo (con il G.E.A.M.):</span> 15,00€
+                    <span className='font-medium'>Escursionimo (con il G.E.A.M.):</span> ritrovo il giovedì sera presso il DLF
                 </p>
                 <p className="mt-2 text-md leading-6 text-slate-100">
-                  <span className='font-medium'>Fotografia:</span> 15,00€ (ritrovo il lunedì sera presso il DLF)
+                  <span className='font-medium'>Fotografia:</span> ritrovo il lunedì sera presso il DLF
                 </p>
                 <p className="mt-2 text-md leading-6 text-slate-100">
                   Eventuali altre attività extra organizzate da ciascun gruppo sono da considerarsi a parte.

@@ -1,13 +1,16 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMedal, faTrain, faFamily, faMountain } from '@fortawesome/pro-solid-svg-icons'
 import Header from '@/components/header';
-import Warning from '@/components/promo';
 import Footer from '@/components/footer';
 import AppStore from '@/components/appStore';
 import GooglePlay from '@/components/googlePlay';
 import Faq from '@/components/faq';
 import News from '@/components/news';
-import Attivita from '@/components/attivita';
+import Warning from '@/components/warning';
+import HomeAttivita from '@/components/homeAttivita';
+
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 const posts = [
   {
@@ -52,14 +55,15 @@ export default function Page() {
 
   return (
     <div className="bg-slate-800">
-    
-    <Attivita />
 
     <Warning />
     
     <Header />
 
-      <div className="relative isolate overflow-hidden pt-14">
+    <HomeAttivita />
+
+      
+    <div className="relative isolate overflow-hidden pt-14">
         <img
           src="/heroHome.jpg"
           alt=""
@@ -113,7 +117,6 @@ export default function Page() {
           />
         </div>
       </div>
-
       
       <div className="relative bg-gray-900">
       <div className="relative h-80 overflow-hidden bg-indigo-600 md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2">
