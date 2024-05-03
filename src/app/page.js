@@ -9,7 +9,8 @@ import News from '@/components/news';
 import Warning from '@/components/warning';
 import HomeAttivita from '@/components/homeAttivita';
 
-export const revalidate = 60
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 const posts = [
   {
