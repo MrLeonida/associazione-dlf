@@ -2,11 +2,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlane, faMasksTheater } from '@fortawesome/pro-solid-svg-icons'
 import Header from '@/components/header';
-import Warning from '@/components/promo';
+import Warning from '@/components/warning';
 import Footer from '@/components/footer';
 import Banner from '@/components/banner';
 import Faq from '@/components/faq';
-import Attivita from '@/components/attivita';
+
+export const revalidate = 60
 
 const highligths = [
   {
@@ -27,8 +28,6 @@ export default function Example() {
 
   return (
     <div className="bg-slate-50">
-    
-    <Attivita />
 
     <Warning />
 

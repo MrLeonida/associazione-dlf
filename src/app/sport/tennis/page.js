@@ -1,12 +1,12 @@
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTennisBall, faRacquet, faUserFriends } from '@fortawesome/pro-solid-svg-icons'
 import Header from '@/components/header';
-import Warning from '@/components/promo';
+import Warning from '@/components/warning';
 import Footer from '@/components/footer';
 import Faq from '@/components/faq';
 import Banner from '@/components/banner';
-import Attivita from '@/components/attivita';
+
+export const revalidate = 60
 
 const features = [
   {
@@ -31,8 +31,6 @@ export default function Page() {
   return (
     <div className="bg-slate-50">
     
-    <Attivita />
-
     <Warning />
 
     <Header />
@@ -101,6 +99,15 @@ export default function Page() {
               </div>
             ))}
           </dl>
+        </div>
+        <div className="mt-10 flex items-center justify-center">
+            <a
+              href="https://www.instagram.com/trevisotennisteam"
+              target="blank"
+              className="rounded-md bg-indigo-800 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              Visualizza la pagina social
+            </a>
         </div>
       </div>
     </div>

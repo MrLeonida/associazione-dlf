@@ -1,12 +1,12 @@
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faVolleyball, faUserGroupSimple, faGoalNet } from '@fortawesome/pro-solid-svg-icons'
 import Header from '@/components/header';
-import Warning from '@/components/promo';
+import Warning from '@/components/warning';
 import Footer from '@/components/footer';
 import Faq from '@/components/faq';
 import Banner from '@/components/banner';
-import Attivita from '@/components/attivita';
+
+export const revalidate = 60
 
 const features = [
   {
@@ -31,8 +31,6 @@ export default function Page() {
   return (
     <div className="bg-slate-50">
 
-    <Attivita />
-    
     <Warning />
 
     <Header />
