@@ -1,5 +1,5 @@
 import db from "./firebaseConfig";
-import { collection, query, where, orderBy, limit, getDocs } from "firebase/firestore";
+import { collection, query, where, orderBy, limit, getDocsFromServer } from "firebase/firestore";
 
 export async function fetchNewsActivityActualFromFirestore() {
     try {
@@ -10,7 +10,7 @@ export async function fetchNewsActivityActualFromFirestore() {
                         orderBy("timestampPromoTo", "asc"),
                         limit(1));
     
-        const querySnapshot = await getDocs(q);
+        const querySnapshot = await getDocsFromServer(q);
         const posts = querySnapshot.docs.map(doc => ({
             id: doc.id, 
             fieldData: doc.data()
