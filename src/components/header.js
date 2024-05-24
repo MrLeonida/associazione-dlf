@@ -27,7 +27,6 @@ const company = [
   { name: 'Nazionale', href: 'https://nazionale.dlf.it/' },
   { name: 'Diventa socio', href: '/socio' },
   { name: 'News', href: '/news' },
-  { name: 'Contatti', href: '/contatti' },
 ]
 const app = [
   { name: 'App Store', href: 'https://apps.apple.com/it/app/wansport/id6445919117' },
@@ -51,7 +50,7 @@ export default function Header() {
             <img className="h-10 w-auto" src="/logo.png" alt="" />
           </a>
         </div>
-        <div className="flex lg:hidden">
+        <div className="flex xl:hidden">
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
@@ -61,7 +60,7 @@ export default function Header() {
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <Popover.Group className="hidden lg:flex lg:gap-x-12">
+        <Popover.Group className="hidden xl:flex xl:gap-x-12">
 
         <Popover className="relative">
             <Popover.Button className="flex items-center gap-x-1.5 text-sm font-semibold leading-6 text-slate-900 uppercase">
@@ -152,13 +151,11 @@ export default function Header() {
           <a href="/spazi-e-servizi" className="text-sm font-semibold leading-6 text-slate-900 uppercase">
             Spazi e servizi
           </a>
+          <a href="/contatti" className="text-sm font-semibold leading-6 text-slate-900 uppercase">
+            Contatti
+          </a>
 
-
-        </Popover.Group>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-
-          <Popover.Group>
-            <Popover className="relative">
+          <Popover className="relative">
               <Popover.Button className="flex items-center gap-x-1.5 text-sm font-semibold leading-6 text-slate-900 uppercase">
                 Prenota
                 <FontAwesomeIcon icon={faChevronDown} className="fa-sm text-slate-400" />
@@ -175,11 +172,11 @@ export default function Header() {
                 ))}
               </Popover.Panel>
             </Popover>
-          </Popover.Group>
 
-        </div>
+
+        </Popover.Group>
       </nav>
-      <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+      <Dialog as="div" className="xl:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
@@ -265,6 +262,12 @@ export default function Header() {
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-900 hover:bg-gray-50 uppercase"
                 >
                   Spazi e servizi
+                </a>
+                <a
+                  href="/contatti"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-900 hover:bg-gray-50 uppercase"
+                >
+                  Contatti
                 </a>
 
                 
