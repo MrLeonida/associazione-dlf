@@ -1,6 +1,6 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLeaf, faTrain, faCamera, faFamily } from '@fortawesome/pro-solid-svg-icons'
+import { faLeaf, faTrain, faCamera, faFamily, faSirenOn } from '@fortawesome/pro-solid-svg-icons'
 import Header from '@/components/header';
 import Warning from '@/components/warning';
 import Footer from '@/components/footer';
@@ -96,6 +96,20 @@ export default function Example() {
                   <p className="mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
                     Esplora, cattura, crea: unisciti ai nostri gruppi tematici di escursionismo, fotografia e fermodellismo e scopri un mondo di passioni condivise e legami duraturi. Inoltre, i nostri centri estivi offrono opportunità uniche per divertimento e apprendimento durante le vacanze estive.
                   </p>
+                  <div className="mt-10">
+                      <div className='flex items-center justify-left'>
+                        <FontAwesomeIcon icon={faSirenOn} className="text-indigo-500 fa-md" />
+                        <p className="text-indigo-500 ml-2 text-sm">Gruppi in risalto!</p>
+                      </div>
+                      <div className="mt-5 inline-grid grid-cols-1 gap-y-4">
+                        <a href="https://www.facebook.com/gruppofermodellistitrevigiani/" target="_blank" className="rounded-md bg-indigo-800 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                          Gruppo Fermodellisti Trevigiani
+                        </a>
+                        <a href="https://sites.google.com/view/geamtv/home" target="_blank" className="rounded-md bg-indigo-800 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                          Gruppo Escursionisti Amatori Montagna
+                        </a>
+                      </div>
+                  </div>
                 </div>
                 <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
                   <div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
