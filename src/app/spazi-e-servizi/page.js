@@ -15,21 +15,46 @@ const highligths = [
     title: 'Sale riunioni',
     text: 'Le nostre due sale riunioni sono ideali per incontri di lavoro, corsi di formazione o presentazioni, queste sale sono completamente attrezzate, spazione e luminose. Offrono un ambiente confortevole e professionale, perfetto per rendere ogni evento un successo.',
     icon: faGraduationCap,
+    images: ''
   },
   {
     title: 'Sala digitale',
     text: 'La nostra sala dedicata alla formazione digitale è dotata di computer e connessione internet ad alta velocità. Questo ambiente è l\'ideale per corsi di formazione, workshop digitali e seminari. Un ambiente tecnologicamente attrezzato per apprendimenti efficaci e interattivi.',
     icon: faAirplay,
+    images: [
+      {
+        path: '/spaziServiziGallery3.jpg'
+      },
+      {
+        path: '/spaziServiziGallery4.jpg'
+      }
+    ]
   },
   {
     title: 'Palestre',
     text: 'La nostre due palestre sono ampie e ben attrezzate, perfette per ospitare una varietà di attività sportive. Disponibili per l\'affitto, queste strutture sono ideali per eventi sportivi, allenamenti di squadra e sessioni di fitness individuali, offrendo attrezzature moderne in un ambiente motivante.',
     icon: faDumbbell,
+    images: [
+      {
+        path: '/spaziServiziGallery5.jpg'
+      },
+      {
+        path: '/spaziServiziGallery6.jpg'
+      }
+    ]
   },
   {
     title: 'Bar',
     text: 'La nostra associazione sportiva offre anche un bar accogliente e ben fornito. Perfetto per eventi sociali, incontri dopo l\'allenamento o celebrazioni, il nostro bar crea un ambiente rilassante e conviviale dove soci e ospiti possono rilassarsi e socializzare.',
     icon: faMugHot,
+    images: [
+      {
+        path: '/spaziServiziGallery7.jpg'
+      },
+      {
+        path: '/spaziServiziGallery8.jpg'
+      }
+    ]
   }
 ]
 
@@ -194,11 +219,23 @@ export default function Example() {
                   Il dopolavoro ferroviario si impegna a mettere a disposizione degli associati gli strumenti essenziali per sviluppare iniziative e progetti. Il nostro impegno si traduce in una vasta gamma di convenzioni mirate a soddisfare le esigenze di ciascun associato. Inoltre, mettiamo a disposizione dei nostri soci spazi in affitto per eventi, riunioni, attività sportive o semplicemente per trascorrere del tempo con amici e familiari. 
                 </p>
                 <ul role="list" className="mt-8 space-y-8 text-gray-600">
-                {highligths.map((highligth) => (
-                  <li key={highligth.title} className="flex gap-x-3">
-                    <FontAwesomeIcon icon={highligth.icon} className="mt-1 h-5 w-5 flex-none text-red-600 fa-lg" />
-                    <span>
-                      <strong className="font-semibold text-gray-900">{highligth.title}</strong>. {highligth.text}</span>
+                {highligths.map((highlight) => (
+                  <li key={highlight.title}>
+                    <div className="flex gap-x-3">
+                      <FontAwesomeIcon icon={highlight.icon} className="mt-1 h-5 w-5 flex-none text-red-600 fa-lg" />
+                      <div>
+                        <strong className="font-semibold text-gray-900">{highlight.title}</strong>. {highlight.text}
+                        {Array.isArray(highlight.images) && highlight.images.length > 0 && (
+                          <div className="grid grid-cols-2 mt-4 gap-4">
+                            {highlight.images.map((image, index) => (
+                              <div key={index}>
+                                <img className="h-auto max-w-full rounded-lg" src={image.path} alt="" />
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    </div>
                   </li>
                 ))}
               </ul>
