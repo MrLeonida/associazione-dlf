@@ -48,7 +48,7 @@ const people = [
     icon: faUserTieHairLong,
   },
   {
-    name: 'Terziario Michele',
+    name: 'Terzariol Michele',
     role: 'Amministratore',
     icon: faUserTieHair,
   },
