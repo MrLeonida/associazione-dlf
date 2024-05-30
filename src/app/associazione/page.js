@@ -53,6 +53,11 @@ const people = [
     icon: faUserTieHair,
   },
   {
+    name: 'Brianese Maura',
+    role: 'Segreteria',
+    icon: faUserTieHairLong,
+  },
+  {
     name: 'Consiglieri',
     role: 'Bertocco Vittorio\nBaratta Nicoletta\nVerdone Maria Giuseppina\nVisentin Roberto',
     icon: faUserGroupSimple,
