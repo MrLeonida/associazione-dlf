@@ -15,7 +15,7 @@ const highligths = [
     title: 'Fermodellismo',
     text: 'Scopri il mondo del fermodellismo con il Gruppo Fermodellisti Trevigiani, una realtà dedicata al recupero della memoria storica del patrimonio ferroviario. Attraverso lezioni coinvolgenti e pratiche, imparerai le tecniche fondamentali per costruire e personalizzare dettagliate riproduzioni in scala ridotta di treni, paesaggi e strutture ferroviarie (che sia una riproduzione al vero oppure di fantasia). Un gruppo che facilita gli incontri, gli scambi di idee e di esperienze tra modellisti ed amanti del treno! ',
     icon: faTrain,
-    href: 'https://www.facebook.com/gruppofermodellistitrevigiani/'
+    href: 'https://gruppofermodellistitrevigiani.wordpress.com'
   },
   {
     title: 'Escursionismo',
@@ -101,12 +101,24 @@ export default function Example() {
                         <FontAwesomeIcon icon={faSirenOn} className="text-indigo-500 fa-md" />
                         <p className="text-indigo-500 ml-2 text-sm">Gruppi in risalto!</p>
                       </div>
-                      <div className="mt-5 inline-grid grid-cols-1 gap-y-4">
-                        <a href="https://www.facebook.com/gruppofermodellistitrevigiani/" target="_blank" className="rounded-md bg-indigo-800 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                          Gruppo Fermodellisti Trevigiani
+                      <div className="mt-5 inline-grid grid-cols-2 gap-x-4">
+                        <a href="https://gruppofermodellistitrevigiani.wordpress.com" target="_blank" className="">
+                          <img
+                              alt="Gruppo Fermodellisti Trevigiani"
+                              src="/GFT_Logo.png"
+                              width={150}
+                              height={150}
+                              className=""
+                          />
                         </a>
-                        <a href="https://sites.google.com/view/geamtv/home" target="_blank" className="rounded-md bg-indigo-800 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                          Gruppo Escursionisti Amatori Montagna
+                        <a href="https://sites.google.com/view/geamtv/home" target="_blank" className="">
+                          <img
+                              alt="Gruppo Escursionisti Amatori Montagna"
+                              src="/GEAM_Logo.png"
+                              width={150}
+                              height={150}
+                              className=""
+                          />
                         </a>
                       </div>
                   </div>
