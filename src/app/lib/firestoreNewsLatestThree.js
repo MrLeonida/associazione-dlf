@@ -1,10 +1,11 @@
 import db from "./firebaseConfig";
-import { collection, query, where, orderBy, limit, getDocs } from "firebase/firestore";
+import { collection, query, where, orderBy, limit, getDocs, Timestamp } from "firebase/firestore";
 
 export async function fetchNewsLatestThreeFromFirestore() {
     try {
         const newsRef = collection(db, "news");
-        const q = query(newsRef, where("active", "==", true), orderBy("timestampCreation", "desc"), limit(3));
+        const now = Timestamp.now();
+        const q = query(newsRef, where("active", "==", true), where("timestampCreation", "<=", now), orderBy("timestampCreation", "desc"), limit(3));
         const querySnapshot = await getDocs(q);
         const posts = querySnapshot.docs.map(doc => ({
             id: doc.id, 
