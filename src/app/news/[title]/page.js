@@ -50,13 +50,21 @@ export default async function Page({params}) {
               {post.fieldData.imageSubtitle}
             </figcaption>
           </figure>
-          <div className="mt-10 max-w-2xl" dangerouslySetInnerHTML={{ __html: post.fieldData.htmlText }}>
-          </div>
+          <div className="mt-10 max-w-2xl" dangerouslySetInnerHTML={{ __html: post.fieldData.htmlText }}></div>
+          {post.fieldData.image2 && (
+            <figure className="mt-10">
+              <img
+                className="max-w-lg m-0 m-auto"
+                src={post.fieldData.image2}
+                alt=""
+              />
+            </figure>
+          )}
           <div className="mt-10 flex">
-                <a href="/contatti" className="text-base font-semibold leading-7 text-indigo-600 underline underline-offset-2">
-                  Contattaci per maggiori informazioni <span aria-hidden="true">&rarr;</span>
-                </a>
-              </div>
+            <a href="/contatti" className="text-base font-semibold leading-7 text-indigo-600 underline underline-offset-2">
+              Contattaci per maggiori informazioni <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
         </div>
       </div>
 
