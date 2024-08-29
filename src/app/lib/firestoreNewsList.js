@@ -1,11 +1,13 @@
 import db from "./firebaseConfig";
-import { collection, query, where, orderBy, limit, getDocs } from "firebase/firestore";
+import { collection, query, where, orderBy, limit, getDocs, Timestamp } from "firebase/firestore";
 
 export async function fetchNewsListFromFirestore() {
     try {
         const newsRef = collection(db, "news");
+        const now = Timestamp.now();
         const newsQuery = query(newsRef, 
                                 where("active", "==", true),
+                                where("timestampCreation", "<=", now),
                                 orderBy("timestampCreation", "desc"),
                                 limit(10));
 
