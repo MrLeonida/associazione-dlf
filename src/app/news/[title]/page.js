@@ -52,9 +52,9 @@ export default async function Page({params}) {
           </figure>
           <div className="mt-10 max-w-2xl" dangerouslySetInnerHTML={{ __html: post.fieldData.htmlText }}></div>
           {post.fieldData.image2 && (
-            <figure className="mt-10">
+            <figure className="sm:mt-10 sm:max-w-lg sm:m-auto w-full mt-10">
               <img
-                className="max-w-lg m-0 m-auto"
+                className="w-full h-auto"
                 src={post.fieldData.image2}
                 alt=""
               />
