@@ -1,14 +1,17 @@
 import db from "./firebaseConfig";
-import { collection, query, where, orderBy, limit, getDocs } from "firebase/firestore";
+import { collection, query, where, orderBy, limit, getDocs, Timestamp } from "firebase/firestore";
 
-export async function fetchNewsPromoActualFromFirestore() {
+export async function fetchNewsPromoWarningFromFirestore() {
     try {
         const newsRef = collection(db, "news");
+        const now = Timestamp.now();
         const q = query(newsRef,
-                        where("promo", "==", true),
+                        where("category", "==", "Promo"),
                         where("active", "==", true),
-                        orderBy("timestampPromoTo", "asc"),
-                        limit(1));
+                        where("timestamPromoFrom", "<=", now),
+                        where("timestampPromoTo", ">=", now),
+                        orderBy("timestamPromoFrom", "asc"),
+                        orderBy("timestampPromoTo", "asc"));
     
         const querySnapshot = await getDocs(q);
         const posts = querySnapshot.docs.map(doc => ({
