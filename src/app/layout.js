@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-      <meta name="theme-color" content="#115e59"></meta>
+      <meta name="theme-color" content="#3730a3"></meta>
       <link rel="icon" href="/favicon.ico" sizes="any" />
       
       <Script id="my-script" strategy="afterInteractive">
