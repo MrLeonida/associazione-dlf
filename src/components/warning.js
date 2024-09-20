@@ -25,7 +25,7 @@ export default async function Warning() {
     <div>
       {activities && activities.length > 0 && (
         <div className="flex items-center justify-center gap-x-6 bg-indigo-800 px-6 py-2.5 sm:px-3.5">
-          <p className="text-sm leading-8 text-white">
+          <p className="text-sm text-center leading-6 text-white sm:leading-8">
             <FontAwesomeIcon icon={faPartyHorn} className="fa-lg mr-1.5" />
             <span className="font-semibold">Attività in risalto! </span>
 
@@ -51,7 +51,7 @@ export default async function Warning() {
 
       {promos && promos.length > 0 && (
         <div className="flex items-center justify-center gap-x-6 bg-teal-800 px-6 py-2.5 sm:px-3.5">
-          <p className="text-sm leading-8 text-white">
+          <p className="text-sm text-center leading-8 text-white sm:leading-8">
             <FontAwesomeIcon icon={faBells} className="fa-lg mr-1.5" />
             <span className="font-semibold">Promo in corso! </span>
 
