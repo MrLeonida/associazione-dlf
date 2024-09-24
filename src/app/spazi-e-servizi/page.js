@@ -1,6 +1,6 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGraduationCap, faAirplay, faDumbbell, faMugHot } from '@fortawesome/pro-solid-svg-icons'
+import { faGraduationCap, faAirplay, faDumbbell, faMugHot, faChargingStation } from '@fortawesome/pro-solid-svg-icons'
 import Header from '@/components/header';
 import Warning from '@/components/warning';
 import Footer from '@/components/footer';
@@ -11,6 +11,12 @@ export const dynamic = 'force-dynamic'
 export const revalidate = 0
 
 const highligths = [
+  {
+    title: 'Colonnina di ricarica',
+    text: 'Il nostro circolo sportivo è dotato di una colonnina di ricarica per auto elettriche “Repower Giotto”. Questo nuovo servizio rappresenta un ulteriore passo verso la sostenibilità e l\’innovazione, offrendo ai nostri soci la possibilità di ricaricare i propri veicoli elettrici comodamente durante la permanenza presso il circolo. La colonnina, grazie al suo design moderno e funzionale, è in grado di gestire ricariche efficienti e sicure, contribuendo a ridurre l\’impatto ambientale e a promuovere una mobilità più green.',
+    icon: faChargingStation,
+    images: ''
+  },
   {
     title: 'Sale riunioni',
     text: 'Le nostre due sale riunioni sono ideali per incontri di lavoro, corsi di formazione o presentazioni, queste sale sono completamente attrezzate, spazione e luminose. Offrono un ambiente confortevole e professionale, perfetto per rendere ogni evento un successo.',
