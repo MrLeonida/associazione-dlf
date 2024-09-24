@@ -5,7 +5,7 @@ export async function fetchNewsLatestThreeFromFirestore() {
     try {
         const newsRef = collection(db, "news");
         const now = Timestamp.now();
-        const q = query(newsRef, where("active", "==", true), where("timestampCreation", "<=", now), orderBy("timestampCreation", "desc"), limit(3));
+        const q = query(newsRef, where("active", "==", true), where("timestampCreation", "<=", now), orderBy("timestampCreation", "desc"), limit(6));
         const querySnapshot = await getDocs(q);
         const posts = querySnapshot.docs.map(doc => ({
             id: doc.id, 
