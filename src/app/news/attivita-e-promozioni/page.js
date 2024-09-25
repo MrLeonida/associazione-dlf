@@ -1,4 +1,4 @@
-import { fetchNewsActivityListFromFirestore } from '@/app/lib/firestoreNewsActivityList';
+import { fetchNewsWarningFromFirestore } from '@/app/lib/firestoreNewsWarning';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import Faq from '@/components/faq';
@@ -8,7 +8,7 @@ export const dynamic = 'force-dynamic'
 export const revalidate = 0
 
 async function getData() {
-  const data = await fetchNewsActivityListFromFirestore();
+  const data = await fetchNewsWarningFromFirestore();
   return data
 };
 
@@ -27,7 +27,7 @@ export default async function Page() {
     <div className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-4xl">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Le attività attualmente in risalto</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Le attività e le promozioni attualmente in corso</h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
           Scopri le attività in primo piano della nostra associazione! Questa sezione ti offre una panoramica sulle iniziative che stanno animando la nostra comunità in questo momento. Segui gli aggiornamenti e approfitta delle opportunità che ti offriamo per essere parte attiva del nostro gruppo. Unisciti a noi e vivi appieno l&apos;energia delle nostre proposte in risalto!
           </p>
