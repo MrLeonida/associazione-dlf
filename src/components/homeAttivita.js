@@ -1,7 +1,7 @@
-import { fetchNewsActivityActualFromFirestore } from "@/app/lib/firestoreNewsActivityActual";
+import { fetchNewsActualFromFirestore } from "@/app/lib/firestoreNewsActual";
 
 async function getData() {
-  const data = await fetchNewsActivityActualFromFirestore();
+  const data = await fetchNewsActualFromFirestore();
   return data
 };
 
