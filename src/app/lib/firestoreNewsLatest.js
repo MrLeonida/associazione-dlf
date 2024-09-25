@@ -1,7 +1,7 @@
 import db from "./firebaseConfig";
 import { collection, query, where, orderBy, limit, getDocs, Timestamp } from "firebase/firestore";
 
-export async function fetchNewsLatestThreeFromFirestore() {
+export async function fetchNewsLatestFromFirestore() {
     try {
         const newsRef = collection(db, "news");
         const now = Timestamp.now();
