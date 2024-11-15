@@ -59,7 +59,7 @@ const people = [
   },
   {
     name: 'Consiglieri',
-    role: 'Bertocco Vittorio\nBaratta Nicoletta\nVerdone Maria Giuseppina\nVisentin Roberto',
+    role: 'Bertocco Vittorio\nMarchesin Renato\nVerdone Maria Giuseppina\nVisentin Roberto',
     icon: faUserGroupSimple,
   }
 ]
