@@ -65,7 +65,7 @@ export async function fetchNewsActualFromFirestore() {
 
         const newsSnapshot = await getDocs(newsQuery);
 
-        // Se esistono risultati per "Evento", restituiscili
+        // Se esistono risultati per "News", restituiscili
         if (!newsSnapshot.empty) {
             const newsPosts = newsSnapshot.docs.map(doc => ({
                 id: doc.id,
