@@ -52,6 +52,28 @@ export async function fetchNewsActualFromFirestore() {
             return eventPosts;
         }
 
+        // Se non ci sono risultati per "Evento", esegui la query per "News"
+        const newsQuery = query(newsRef,
+            where("category", "==", "News"),
+            where("active", "==", true),
+            where("timestamPromoFrom", "<=", now),
+            where("timestampPromoTo", ">=", now),
+            orderBy("timestamPromoFrom", "asc"),
+            orderBy("timestampPromoTo", "asc"),
+            limit(1)
+        );
+
+        const newsSnapshot = await getDocs(newsQuery);
+
+        // Se esistono risultati per "Evento", restituiscili
+        if (!newsSnapshot.empty) {
+            const newsPosts = newsSnapshot.docs.map(doc => ({
+                id: doc.id,
+                fieldData: doc.data()
+            }));
+            return newsPosts;
+        }
+
         // Se non ci sono risultati in nessuna delle due categorie, restituisci un array vuoto
         return [];
     } catch (error) {
